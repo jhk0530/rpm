@@ -1,0 +1,73 @@
+{
+  "name": "rpm",
+  "displayName": "RPM",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "rpm",
+          "title": "RPM",
+          "icon": "media/package.svg"
+        }
+      ]
+    },
+    "views": {
+      "rpm": [
+        {
+          "id": "rpmView",
+          "name": "Installed Packages",
+          "icon": "media/update.svg"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "rpm.showWebview",
+        "title": "RPM: Show Web View"
+      },
+      {
+        "command": "rpm.showOldPackages",
+        "title": "Refresh",
+        "icon": "media/refresh-white.svg"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "rpm.showOldPackages",
+          "aawhen": "view == rpm",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.93.0",
+    "@types/mocha": "^10.0.9",
+    "@types/node": "20.x",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "eslint": "^9.13.0",
+    "typescript": "^5.6.3",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1"
+  }
+}
