@@ -17,7 +17,7 @@ Following features are planned:
 
 For example if there is an image subfolder under your extension project workspace:
 
-\!\[lists\]\(image/image.png\)
+<img src='image/image.png'>
 
 ## Known Issues
 
