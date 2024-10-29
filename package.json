@@ -3,6 +3,10 @@
   "displayName": "RPM",
   "description": "",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhk0530/rpm.git"
+  },
   "engines": {
     "vscode": "^1.93.0"
   },
